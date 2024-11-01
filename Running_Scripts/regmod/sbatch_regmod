@@ -1,0 +1,40 @@
+#!/bin/bash
+#SBATCH --partition=general-compute
+#SBATCH --qos=general-compute
+#SBATCH --cluster=ub-hpc
+#SBATCH --time=72:00:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=12
+#SBATCH --job-name="regmod"
+#SBATCH --array=0-879
+#SBATCH --output="regmod-%A_%a.out"
+#SBATCH --error="regmod-%A_%a.err"
+#SBATCH --mail-user=lyang25@buffalo.edu
+#SBATCH --mail-type=END
+#SBATCH --requeue
+#SBATCH --mem=64G
+tic=`date +%s`
+echo "Start Time = "`date`
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+module load matlab/R2019b
+module list
+ulimit -s unlimited
+
+# adjusting home directory reportedly yields a 10x MatLab speedup
+export HOME=$SLURMTMPDIR
+
+# adjust temporary directory
+export TMP=$SLURMTMPDIR
+
+VALUES=({0..879})
+matlab -nodisplay -r "run_Regmod(${VALUES[$SLURM_ARRAY_TASK_ID]})"
+
+echo "All Done!"
+
+echo "End Time = "`date`
+toc=`date +%s`
+
+elapsedTime=`expr $toc - $tic`
+echo "Elapsed Time = $elapsedTime seconds"

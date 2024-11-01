@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH --partition=general-compute
+#SBATCH --qos=general-compute
+#SBATCH --cluster=ub-hpc
+#SBATCH --time=72:00:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=12
+#SBATCH --job-name="hhot"
+#SBATCH --array=0-879
+#SBATCH --output="hhot-%A_%a.out"
+#SBATCH --error="hhot-%A_%a.err"
+#SBATCH --mail-user=lyang25@buffalo.edu
+#SBATCH --mail-type=END
+#SBATCH --requeue
+#SBATCH --mem=100000
+echo "SLURM_JOBID="$SLURM_JOBID
+echo "SLURM_JOB_NODELIST"=$SLURM_JOB_NODELIST
+echo "SLURM_NNODES"=$SLURM_NNODES
+echo "SLURMTMPDIR="$SLURMTMPDIR
+echo "SLURM_ARRAYID="$SLURM_ARRAYID
+echo "SLURM_ARRAY_JOB_ID"=$SLURM_ARRAY_JOB_ID
+echo "SLURM_ARRAY_TASK_ID"=$SLURM_ARRAY_TASK_ID
+echo "working directory = "$SLURM_SUBMIT_DIR
+
+tic=`date +%s`
+echo "Start Time = "`date`
+
+cd $SLURM_SUBMIT_DIR
+echo "working directory = "$SLURM_SUBMIT_DIR
+module use /projects/academic/yijunsun/leyang/modulefiles
+module load python/anaconda3
+module list
+ulimit -s unlimited
+
+VALUES=({0..879})
+python survey_step2.py ${VALUES[$SLURM_ARRAY_TASK_ID]}
+
+echo "All Done!"
+
+echo "End Time = "`date`
+toc=`date +%s`
+
+elapsedTime=`expr $toc - $tic`
+echo "Elapsed Time = $elapsedTime seconds"

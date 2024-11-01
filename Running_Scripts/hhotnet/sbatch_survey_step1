@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH --partition=general-compute
+#SBATCH --qos=general-compute
+#SBATCH --cluster=ub-hpc
+#SBATCH --time=72:00:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=12
+#SBATCH --job-name="hhotnet1"
+#SBATCH --output="hhot.out"
+#SBATCH --error="hhot.err"
+#SBATCH --mail-user=lyang25@buffalo.edu
+#SBATCH --mail-type=END
+
+tic=`date +%s`
+echo "Start Time = "`date`
+
+module use /projects/academic/yijunsun/leyang/modulefiles
+module load python/anaconda3
+module list
+ulimit -s unlimited
+
+python survey_step1.py
+
+echo "All Done!"
+
+echo "End Time = "`date`
+toc=`date +%s`
+
+elapsedTime=`expr $toc - $tic`
+echo "Elapsed Time = $elapsedTime seconds"
