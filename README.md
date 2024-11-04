@@ -9,8 +9,7 @@ This repository contains the code, data, and instructions for replicating analys
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Data](#data)
-- [Results](#results)
+- [Demo](#demo)
 - [Citing this Work](#citing-this-work)
 - [Contact](#contact)
 
