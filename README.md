@@ -24,7 +24,7 @@ Network-based methods have become essential tools in computational biology, part
 
 ## Installation
 
-Each method need to be installed following their own guide. We recommend use Easybuild to set up the environment for each method on high-performance computing system. See details in table `comparison_table.xlsx`.
+Each method need to be installed following their own guide. We recommend use Easybuild to set up the environment for each method on high-performance computing system. See details in table `network_methods_comparison.xlsx`.
 
 
 ## Usage
