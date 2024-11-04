@@ -42,7 +42,7 @@ Once generated, place the generated scores and processed networks in the `data/`
 ## Demo
 
 Here is a Demo for running FDRnet algorithm under our benchmark framework:
- - Step 1: Follow the Jupyter notebook survey_data_generation.ipynb to generate synthetic datasets. Make `data/`, `network/`, `result` folders in FDRnet's folder in `Running_Scripts`. Put generated lfdr files into `data/` and processed network files to `network\`.
+ - Step 1: Follow the Jupyter notebook survey_data_generation.ipynb to generate synthetic datasets. Make `data/`, `network/`, `result/` folders in FDRnet's folder in `Running_Scripts`. Put generated lfdr files into `data/` and processed network files to `network/`.
  - Step 2: Upload all the data and code to high-performance computing system.
  - Step 3: Install the environment of FDRnet following the guideline of `https://github.com/yangle293/FDRnet`.
  - Step 4: If using Slurm, run `sbatch sbatch_fdrnet` to run batch jobs.
