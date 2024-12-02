@@ -56,7 +56,7 @@ We provide the data and code for nine TCGA datasets (BLCA, LUAD, LUSC, COADREAD,
 - The raw datasets were downloaded from the TCGA firehose website `https://gdac.broadinstitute.org/` and preprocessed to assign a p-value for each gene.
 - These studies can be submitted to high-performance computing platform using the same scripts in `Running_Scripts`.
 - The resulting subnetwork can be analyzed by the scripts in the `TCGA/scripts` directory.
-- You can use the `analysis_script_real.ipynb to reproduce the figures in the paper.
+- You can use the `analysis_script_real.ipynb` to reproduce the figures in the paper.
 
 ## Citing this Work
 
