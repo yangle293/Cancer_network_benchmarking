@@ -52,7 +52,7 @@ Here is a Demo for running FDRnet algorithm under our benchmark framework:
 ## TCGA Case Study
 
 We provide the data and code for nine TCGA datasets (BLCA, LUAD, LUSC, COADREAD, PRAD, HNSC,
-                 UCEC, KIPAN, BRCA) as cases studies: 
+                 UCEC, KIPAN, BRCA) as case studies: 
 - The raw datasets were downloaded from the TCGA firehose website `https://gdac.broadinstitute.org/` and preprocessed to assign a p-value for each gene.
 - These studies can be submitted to high-performance computing platform using the same scripts in `Running_Scripts`.
 - The resulting subnetwork can be analyzed by the scripts in the `TCGA/scripts` directory.
