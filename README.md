@@ -10,7 +10,7 @@ This repository contains the code, data, and instructions for replicating analys
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
-- [TCGA Case Study](#tcga)
+- [TCGA Case Study](#tcga-case-study)
 - [Citing this Work](#citing-this-work)
 - [Contact](#contact)
 
