@@ -10,6 +10,7 @@ This repository contains the code, data, and instructions for replicating analys
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
+- [TCGA](#tcga)
 - [Citing this Work](#citing-this-work)
 - [Contact](#contact)
 
@@ -21,6 +22,7 @@ Network-based methods have become essential tools in computational biology, part
 - `Data_Generation/`: Jupyter notebooks for generation of synthetic and pre-processing of real data
 
 - `Running_Scripts/`: Scripts for all tested methods. Each method needs to be set up at high-performance computing system. The provided scripts are for Slurm workload manager.
+- `TCGA/`: Data and scripts for nine cancer datasets used in the benchmark study. `TCGA/data` directory has the score files in different formats, such as p-value, q-value, z-values and `TCGA/scripts` directory has the code for loading results and analysing results.
 
 ## Installation
 
@@ -46,6 +48,15 @@ Here is a Demo for running FDRnet algorithm under our benchmark framework:
  - Step 2: Upload all the data and code to high-performance computing system.
  - Step 3: Install the environment of FDRnet following the guideline of `https://github.com/yangle293/FDRnet`.
  - Step 4: If using Slurm, run `sbatch sbatch_fdrnet` to run batch jobs.
+
+## TCGA
+
+We provide the data and code for nine TCGA datasets (BLCA, LUAD, LUSC, COADREAD, PRAD, HNSC,
+                 UCEC, KIPAN, BRCA) as cases studies: 
+- The raw datasets were downloaded from the TCGA firehose website `https://gdac.broadinstitute.org/` and preprocessed to assign a p-value for each gene.
+- These studies can be submitted to high-performance computing platform using the same scripts in `Running_Scripts`.
+- The resulting subnetwork can be analyzed by the scripts in the `TCGA/scripts` directory.
+- You can use the `analysis_script_real.ipynb to reproduce the figures in the paper.
 
 ## Citing this Work
 
