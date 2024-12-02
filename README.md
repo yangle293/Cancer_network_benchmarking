@@ -10,7 +10,7 @@ This repository contains the code, data, and instructions for replicating analys
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
-- [TCGA](#tcga)
+- [TCGA Case Study](#tcga)
 - [Citing this Work](#citing-this-work)
 - [Contact](#contact)
 
@@ -49,7 +49,7 @@ Here is a Demo for running FDRnet algorithm under our benchmark framework:
  - Step 3: Install the environment of FDRnet following the guideline of `https://github.com/yangle293/FDRnet`.
  - Step 4: If using Slurm, run `sbatch sbatch_fdrnet` to run batch jobs.
 
-## TCGA
+## TCGA Case Studies
 
 We provide the data and code for nine TCGA datasets (BLCA, LUAD, LUSC, COADREAD, PRAD, HNSC,
                  UCEC, KIPAN, BRCA) as cases studies: 
