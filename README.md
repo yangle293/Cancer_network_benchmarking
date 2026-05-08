@@ -1,7 +1,6 @@
-
 # Network-Based Method Benchmarking for Cancer Research
 
-This repository contains the code, data, and instructions for replicating analyses from our study, *[Title of Your Paper]*. In this paper, we benchmark network-based methods for identifying functionally important genes and molecular pathways in cancer by leveraging protein-protein interaction (PPI) networks.
+This repository contains the code, data, and instructions for replicating analyses from our study, *A Comprehensive Benchmark Study of Methods for Identifying Significantly Perturbed Subnetworks in Cancer* (Briefings in Bioinformatics, 2025). In this paper, we benchmark network-based methods for identifying functionally important genes and molecular pathways in cancer by leveraging protein-protein interaction (PPI) networks.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -63,19 +62,19 @@ We provide the data and code for nine TCGA datasets (BLCA, LUAD, LUSC, COADREAD,
 If you use this repository in your research, please cite our paper:
 
 ```
-@article{your_paper,
-  author    = {Le Yang, Runpu Chen, Steve Goodison and Yijun Sun},
+@article{yang2025benchmark,
+  author    = {Le Yang and Runpu Chen and Steve Goodison and Yijun Sun},
   title     = {A Comprehensive Benchmark Study of Methods for Identifying Significantly Perturbed Subnetworks in Cancer},
-  journal   = {TBD},
-  year      = {2024},
-  volume    = {TBD},
-  number    = {TBD},
-  pages     = {TBD},
-  doi       = {DOI link}
+  journal   = {Briefings in Bioinformatics},
+  year      = {2025},
+  volume    = {26},
+  number    = {1},
+  pages     = {bbae692},
+  doi       = {10.1093/bib/bbae692}
 }
 ```
 
 ## Contact
 
-For questions or issues, please open an issue on GitHub or contact lyang25@buffalo.edu.
+For questions or issues, please open an issue on GitHub or contact Le Yang at le.yang293@gmail.com.
 
